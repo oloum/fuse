@@ -1,16 +1,14 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { FuseTranslationLoaderService } from '@fuse/services/translation-loader.service';
 import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
 import { locale as english } from './i18n/en';
 import { locale as turkish } from './i18n/tr';
-import { MatButtonModule, MatFormFieldModule, MatInputModule, MatRippleModule } from '@angular/material';
 export interface UserData {
     id: string;
     name: string;
     progress: string;
     color: string;
   }
-  
   /** Constants used to fill up our data base. */
   const COLORS: string[] = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
     'fuchsia', 'lime', 'teal', 'aqua', 'blue', 'navy', 'black', 'gray'];
@@ -26,7 +24,7 @@ export interface UserData {
     templateUrl: './sample.component.html',
     styleUrls  : ['./sample.component.scss']
 })
-export class FuseSampleComponent implements OnInit
+export class FuseSampleComponent implements OnInit,AfterViewInit
 {
     displayedColumns: string[] = ['id', 'name', 'progress', 'color'];
   dataSource: MatTableDataSource<UserData>;
@@ -46,6 +44,12 @@ export class FuseSampleComponent implements OnInit
     ngOnInit() {
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
+       
+      }
+
+      
+      ngAfterViewInit() {
+        this.dataSource.paginator = this.paginator;
       }
       applyFilter(filterValue: string) {
         this.dataSource.filter = filterValue.trim().toLowerCase();

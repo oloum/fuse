@@ -6,7 +6,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import 'hammerjs';
 import {MatTableModule} from '@angular/material/table';
-import {MatPaginatorModule} from '@angular/material';
 import {MatSortModule} from '@angular/material/sort';
 import { FuseModule } from '@fuse/fuse.module';
 import { FuseSharedModule } from '@fuse/shared.module';
@@ -16,7 +15,6 @@ import { AppComponent } from './app.component';
 import { FuseMainModule } from './main/main.module';
 import { FuseSampleModule } from './main/content/sample/sample.module';
 import { MatButtonModule, MatFormFieldModule, MatInputModule, MatRippleModule } from '@angular/material';
-
 const appRoutes: Routes = [
     {
         path      : '**',
@@ -39,7 +37,6 @@ const appRoutes: Routes = [
         RouterModule.forRoot(appRoutes),
         TranslateModule.forRoot(),
         MatTableModule,
-        MatPaginatorModule,
         MatSortModule,
         MatButtonModule,
         MatFormFieldModule,
@@ -57,7 +54,6 @@ const appRoutes: Routes = [
         BrowserModule,
         BrowserAnimationsModule,
         MatTableModule,
-        MatPaginatorModule,
         MatSortModule,
         MatButtonModule,
         MatFormFieldModule,
