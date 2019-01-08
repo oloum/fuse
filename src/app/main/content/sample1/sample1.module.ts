@@ -4,7 +4,7 @@ import {MatTableModule} from '@angular/material/table';
 import { TranslateModule } from '@ngx-translate/core';
 import { FuseSharedModule } from '@fuse/shared.module';
 
-import { FuseSampleComponent } from './sample.component';
+import { FuseSample1Component } from './sample1.component';
 import { MatPaginatorModule, MatSortModule, MatSelectModule, MatInputModule,
      MatFormFieldModule, MatButtonModule, MatToolbarModule, MatIconModule, MatMenuModule, MatProgressSpinnerModule, MatCardModule } from '@angular/material';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
@@ -13,21 +13,24 @@ import { BrowserModule } from '@angular/platform-browser';
 
 const routes = [
     {
-        path     : 'sample',
-        component: FuseSampleComponent
+        path     : 'sample1',
+        component: FuseSample1Component
     }
 ];
 
 @NgModule({
     declarations: [
-        FuseSampleComponent
+        FuseSample1Component
     ],
     imports     : [
         RouterModule.forChild(routes),
+
         TranslateModule,
         MatPaginatorModule,
         FuseSharedModule,
         MatTableModule,
+
+
         BrowserModule,
         BrowserAnimationsModule,
         FormsModule,
@@ -42,10 +45,11 @@ const routes = [
         MatInputModule,
         MatSelectModule,
         MatSortModule,
-       
+        MatTableModule,
+        FuseSample1Component
     ],
     exports     : [
-        FuseSampleComponent,
+        FuseSample1Component,
         MatTableModule,
         
     ]

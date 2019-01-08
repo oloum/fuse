@@ -20,14 +20,14 @@ export const navigation = [
                 }
             },
             {
-                'id'   : 'sample',
-                'title': 'Sample',
+                'id'   : 'sample1',
+                'title': 'Sample1',
                 'translate': 'Gestion profil',
                 'type' : 'item',
                 'icon' : 'email',
-                'url'  : '/test',
+                'url'  : '/sample1',
                 'badge': {
-                    'title': 25,
+                    'title': 26,
                     'translate': '14',
                     'bg'   : '#F44336',
                     'fg'   : '#FFFFFF'
@@ -39,10 +39,10 @@ export const navigation = [
                 'translate': 'Parametrage',
                 'type' : 'item',
                 'icon' : 'email',
-                'url'  : '/test',
+                'url'  : '/test2',
                 'badge': {
-                    'title': 25,
-                    'translate': '14',
+                    'title': 27,
+                    'translate': '17',
                     'bg'   : '#F44336',
                     'fg'   : '#FFFFFF'
                 }

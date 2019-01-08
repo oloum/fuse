@@ -24,7 +24,7 @@ export interface UserData {
     templateUrl: './sample.component.html',
     styleUrls  : ['./sample.component.scss']
 })
-export class FuseSampleComponent implements OnInit,AfterViewInit
+export class FuseSampleComponent implements OnInit, AfterViewInit
 {
     displayedColumns: string[] = ['id', 'name', 'progress', 'color'];
   dataSource: MatTableDataSource<UserData>;
