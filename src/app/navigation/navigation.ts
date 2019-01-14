@@ -6,12 +6,26 @@ export const navigation = [
         'type'    : 'group',
         'children': [
             {
+                'id'   : 'sample1',
+                'title': 'Sample1',
+                'translate': 'Dashboard',
+                'type' : 'item',
+                'icon' : 'dashboard',
+                'url'  : '/main/sample1',
+                'badge': {
+                    'title': 26,
+                    'translate': '4',
+                    'bg'   : '#F44336',
+                    'fg'   : '#FFFFFF'
+                }
+            },
+            {
                 'id'   : 'sample',
                 'title': 'Sample',
                 'translate': 'Gestion utilisateurs',
                 'type' : 'item',
                 'icon' : 'email',
-                'url'  : '/sample',
+                'url'  : '/main/sample',
                 'badge': {
                     'title': 25,
                     'translate': '2',
@@ -19,29 +33,16 @@ export const navigation = [
                     'fg'   : '#FFFFFF'
                 }
             },
+           
             {
-                'id'   : 'sample1',
-                'title': 'Sample1',
-                'translate': 'Gestion profil',
-                'type' : 'item',
-                'icon' : 'email',
-                'url'  : '/sample1',
-                'badge': {
-                    'title': 26,
-                    'translate': '14',
-                    'bg'   : '#F44336',
-                    'fg'   : '#FFFFFF'
-                }
-            },
-            {
-                'id'   : 'sample',
-                'title': 'Sample',
+                'id'   : 'sample2',
+                'title': 'Sample2',
                 'translate': 'Parametrage',
                 'type' : 'item',
-                'icon' : 'email',
-                'url'  : '/test2',
+                'icon' : 'settings',
+                'url'  : '/main/sample2',
                 'badge': {
-                    'title': 27,
+                    'title': 7,
                     'translate': '17',
                     'bg'   : '#F44336',
                     'fg'   : '#FFFFFF'

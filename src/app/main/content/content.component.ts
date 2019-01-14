@@ -1,10 +1,8 @@
 import { Component, HostBinding, OnDestroy } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
-
 import { Subscription } from 'rxjs/Subscription';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/map';
-
 import { fuseAnimations } from '@fuse/animations/index';
 import { FuseConfigService } from '@fuse/services/config.service';
 

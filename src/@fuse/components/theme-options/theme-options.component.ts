@@ -50,12 +50,12 @@ export class FuseThemeOptionsComponent implements OnInit, OnDestroy
 
         nav.push({
             'id'      : 'custom-function',
-            'title'   : 'Custom Function',
+            'title'   : 'Option Affichage',
             'type'    : 'group',
             'children': [
                 {
                     'id'      : 'customize',
-                    'title'   : 'test',
+                    'title'   : 'Réglage',
                     'type'    : 'item',
                     'icon'    : 'settings',
                     'function': () => {

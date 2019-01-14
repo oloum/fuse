@@ -41,7 +41,7 @@ const routes = [
         MatFormFieldModule,
         MatInputModule,
         MatSelectModule,
-        MatSortModule,
+        MatSortModule
        
     ],
     exports     : [
