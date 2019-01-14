@@ -51,7 +51,7 @@ const appRoutes: Routes = [
     declarations: [
         AppComponent,
         FuseLoginlayoutComponent,
-        FuseMasterlayoutComponent,
+        FuseMasterlayoutComponent
         
     ],
     schemas: [
