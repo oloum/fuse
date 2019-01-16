@@ -8,30 +8,30 @@ export const navigation = [
             {
                 'id'   : 'sample1',
                 'title': 'Sample1',
-                'translate': 'Dashboard',
+                'translate': 'Tableau de bord',
                 'type' : 'item',
                 'icon' : 'dashboard',
                 'url'  : '/main/sample1',
-                'badge': {
+                /* 'badge': {
                     'title': 26,
-                    'translate': '4',
+                    'translate': '',
                     'bg'   : '#F44336',
                     'fg'   : '#FFFFFF'
-                }
+                } */
             },
             {
                 'id'   : 'sample',
                 'title': 'Sample',
                 'translate': 'Gestion utilisateurs',
                 'type' : 'item',
-                'icon' : 'email',
+                'icon' : 'account_circle',
                 'url'  : '/main/sample',
-                'badge': {
+                /* 'badge': {
                     'title': 25,
                     'translate': '2',
                     'bg'   : '#F44336',
                     'fg'   : '#FFFFFF'
-                }
+                } */
             },
            
             {
@@ -41,12 +41,12 @@ export const navigation = [
                 'type' : 'item',
                 'icon' : 'settings',
                 'url'  : '/main/sample2',
-                'badge': {
+                /* 'badge': {
                     'title': 7,
                     'translate': '17',
                     'bg'   : '#F44336',
                     'fg'   : '#FFFFFF'
-                }
+                } */
             }
         ]
     }

@@ -48,7 +48,7 @@ export class FuseThemeOptionsComponent implements OnInit, OnDestroy
         // that opens the bar programmatically
         const nav: any = navigation;
 
-        nav.push({
+       /*  nav.push({
             'id'      : 'custom-function',
             'title'   : 'Option Affichage',
             'type'    : 'group',
@@ -63,7 +63,7 @@ export class FuseThemeOptionsComponent implements OnInit, OnDestroy
                     }
                 }
             ]
-        });
+        }); */
     }
 
     ngOnInit()

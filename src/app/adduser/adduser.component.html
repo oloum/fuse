@@ -1,0 +1,23 @@
+<h5 mat-dialog-title class="titrepopup">Création d'un nouvel utilisateur</h5>
+
+<div class="example-container">
+  <mat-form-field>
+    <input matInput placeholder="Nom" type="text">
+    
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="progress" type="number" class="example-right-align">
+    
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="color" type="text" class="example-right-align">
+    
+  </mat-form-field>
+</div>
+
+
+<div mat-dialog-actions>
+  <button mat-raised-button (click)="confirmSelection()" color="primary">Enregistrer</button>
+  <button mat-button (click)="dialogRef.close()">Annuler</button>
+</div>

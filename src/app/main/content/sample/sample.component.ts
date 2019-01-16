@@ -1,8 +1,10 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { FuseTranslationLoaderService } from '@fuse/services/translation-loader.service';
 import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import { locale as english } from './i18n/en';
 import { locale as turkish } from './i18n/tr';
+import { AdduserComponent } from 'app/adduser/adduser.component';
 export interface UserData {
     id: string;
     name: string;
@@ -26,13 +28,14 @@ export interface UserData {
 })
 export class FuseSampleComponent implements OnInit, AfterViewInit
 {
-    displayedColumns: string[] = ['id', 'name', 'progress', 'color'];
+  
+    displayedColumns: string[] = ['id', 'name', 'progress', 'color' , 'actions'];
   dataSource: MatTableDataSource<UserData>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-    constructor(private fuseTranslationLoader: FuseTranslationLoaderService)
+    constructor(private fuseTranslationLoader: FuseTranslationLoaderService, public dialog: MatDialog)
     {
         this.fuseTranslationLoader.loadTranslations(english, turkish);
         // Create 100 users
@@ -40,6 +43,10 @@ export class FuseSampleComponent implements OnInit, AfterViewInit
 
     // Assign the data to the data source for the table to render
     this.dataSource = new MatTableDataSource(users);
+    }
+    openAjoutUser() {
+      const dialog = this.dialog.open(AdduserComponent);
+      dialog.afterClosed();
     }
     ngOnInit() {
         this.dataSource.paginator = this.paginator;
@@ -58,7 +65,9 @@ export class FuseSampleComponent implements OnInit, AfterViewInit
           this.dataSource.paginator.firstPage();
         }
       }
+      
 }
+
 /** Builds and returns a new User. */
 function createNewUser(id: number): UserData {
     const name =

@@ -11,7 +11,7 @@
 
         .profile-image {
             margin-right: 24px;
-
+ 
             @include media-breakpoint('sm') {
                 margin: 0 0 16px 0;
             }

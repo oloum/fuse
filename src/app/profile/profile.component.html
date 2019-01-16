@@ -1,7 +1,8 @@
-<div id="profile" class="page-layout simple tabbed" fusePerfectScrollbar>
+<div class="page-layout blank p-24" fusePerfectScrollbar>
+  <div id="profile" class="page-layout simple tabbed" fusePerfectScrollbar>
 
     <!-- HEADER -->
-    <div class="header p-24" fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-sm="row"
+    <div class="header mat-accent-bg p-24" fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-sm="row"
          fxLayoutAlign.gt-sm="space-between end">
 
         <div class="user-info" fxLayout="column" fxLayoutAlign="center center" fxLayout.gt-sm="row"
@@ -12,11 +13,11 @@
             </div>
         </div>
 
-        <div class="actions" fxLayout="row" fxLayoutAlign="end center" *fuseIfOnDom
+       <div class="actions" fxLayout="row" fxLayoutAlign="end center" *fuseIfOnDom
              [@animate]="{value:'*',params:{delay:'200ms'}}">
             <button mat-raised-button color="accent" aria-label="Follow">Follow</button>
             <button mat-raised-button color="primary" aria-label="Send Message">Send Message</button>
-        </div>
+        </div> 
 
     </div>
     <!-- / HEADER -->
@@ -26,21 +27,22 @@
 
         <mat-tab-group dynamicHeight="true">
 
-            <mat-tab label="Timeline">
-                <fuse-profile-timeline></fuse-profile-timeline>
+            <mat-tab label="Accueil">
+              <fuse-dashboard1></fuse-dashboard1>
             </mat-tab>
 
-            <mat-tab label="About">
-                <fuse-profile-about></fuse-profile-about>
+            <mat-tab label="Organisation">
+                <fuse-profile-information></fuse-profile-information>
             </mat-tab>
 
-            <mat-tab label="Photos & Videos">
-                <fuse-profile-photos-videos></fuse-profile-photos-videos>
+            <mat-tab label="Employés">
+                <fuse-employes></fuse-employes>
             </mat-tab>
 
-        </mat-tab-group>
+        </mat-tab-group> 
 
     </div>
     <!-- / CONTENT -->
 
+</div>
 </div>
